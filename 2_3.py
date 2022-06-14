@@ -1,6 +1,6 @@
 import random
 
-class game:
+class Game:
     def __init__(self):
         self.number = self.rand_num()
         while self.win() == None:
@@ -10,12 +10,12 @@ class game:
                 self.guess = None if self.guess is None else self.dubl_check(self.guess, True)
             self.result_ = self.check_bull_cow()
             print(self.result_)
-            print(self.win())
+            print(self.win() if self.win() is not None else "")
 
     def rand_num(self):
-        randNum = self.dubl_check(str(random.randint(1000, 9999)), False)
-        if randNum == None:
-            self.rand_num()
+        randNum = None
+        while randNum == None:
+            randNum = self.dubl_check(str(random.randint(1000, 9999)), False)
         else:
             return randNum
 
@@ -55,10 +55,9 @@ class game:
         try:
             if self.result_["Cows"] == 4:
                 return "Congratulations you have guessed the number"
-            return None
         except:
-            return None
-obj = game()
+            pass
+obj = Game()
 
 #2
 
