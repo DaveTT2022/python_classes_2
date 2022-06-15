@@ -1,5 +1,4 @@
 import json
-from tkinter import Y
 import yaml
 
 txt_json = {
