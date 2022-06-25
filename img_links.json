@@ -1,0 +1,22 @@
+[
+  {
+    "img_url": "https://files.realpython.com/media/Django-Templates-Custom-Tags_Watermarked.697b0fa399d0.jpeg",
+    "img_name": "img_1.jpg"
+  },
+  {
+    "img_url": "https://files.realpython.com/media/Pythons-not-Keyword_Watermarked.08005c401f67.jpeg",
+    "img_name": "img_2.jpg"
+  },
+  {
+    "img_url": "https://files.realpython.com/media/Parse-XML-With-Python_Watermarked.078af6a3f01c.jpeg",
+    "img_name": "img_3.jpg"
+  },
+  {
+    "img_url": "https://files.realpython.com/media/Pythons-property_Watermarked.b0ccfdca7a54.jpeg",
+    "img_name": "img_4.jpg"
+  },
+  {
+    "img_url": "https://files.realpython.com/media/Pythons-len-Function_Watermarked.9188df7e74ef.jpeg",
+    "img_name": "img_5.jpg"
+  }
+]
