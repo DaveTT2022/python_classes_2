@@ -48,8 +48,12 @@ class MakeImage:
         self.read_file()
         thread_list = []
         for elems in self.data:
-            x = threading.Thread(target=self.create_img, args=(elems["img_name"], elems["img_url"]))
-            x.start()
+            thd = threading.Thread(target=self.create_img, args=(elems["img_name"], elems["img_url"]))
+            thd.start()
+            thread_list.append(thd)
 
+        for thread in thread_list:
+            thread.join()
+        
 make_image = MakeImage("img_links.json")
 make_image.thread_create()
