@@ -2,7 +2,7 @@ import prettytable
 
 
 class WebStore(object):
-    INST_NUM = 0
+    INST_NUM = 0    
     product_list = set()
     def __new__(cls, **kwargs):
         WebStore.product_list.add(kwargs["product"])
@@ -26,17 +26,9 @@ class WebStore(object):
 
     @staticmethod
     def top_requests():
-        sum_ = 0
-        highest = 0
-        addrs = ''
-        for address in WebStore.dict_info.keys():
-            for quantity in WebStore.dict_info[address].values():
-                sum_ += int(quantity)
-            if sum_ > highest:
-                highest = sum_
-                addrs = address
-            sum_ = 0
-        return addrs, highest
+        list_keys = list(WebStore.dict_info.keys())
+        list_keys.sort(reverse = True, key = lambda add : sum(WebStore.dict_info[add].values()))
+        return list_keys
 
 def product_nums(prod_list: dict):
     list_prod = []
@@ -71,6 +63,12 @@ for list_ in product_gen:
 table.align = "c"
 print(table)
 
+top_table = prettytable.PrettyTable()
+top_table.set_style(16)
+
 most = WebStore.top_requests()
-print(f"Most products have been purchased in {most[0]} address, {most[1]} products")
-print(str(table))
+
+top_table.add_column("", [x for x in range(1, len(most) + 1)])
+top_table.add_column("Top purchases", [x for x in most])
+
+print(top_table)
