@@ -72,3 +72,4 @@ top_table.add_column("", [x for x in range(1, len(most) + 1)])
 top_table.add_column("Top purchases", [x for x in most])
 
 print(top_table)
+#----------------------------------------------
