@@ -1,0 +1,23 @@
+{
+    "Arman": {
+        "user": "Arman",
+        "password": "arm99",
+        "age": "38",
+        "email": "Arm@gmail.com",
+        "phone": "06587594"
+    },
+    "Vazgen": {
+        "user": "Vazgen",
+        "password": "1234",
+        "age": "25",
+        "email": "Vazgen@gmail.com",
+        "phone": "09982566"
+    },
+    "John": {
+        "user": "John",
+        "password": "johny1987",
+        "age": "35",
+        "email": "john@gmail.com",
+        "phone": "9829624"
+    }
+}
